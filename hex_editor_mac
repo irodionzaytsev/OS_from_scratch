@@ -1,0 +1,15 @@
+$ od -t x1 -A n <filename>
+-t: type
+x: hex
+1: 1 byte at a time
+-A: address
+n: no address (could be x for hex)
+
+vim for hex editing:
+:%!xxd [[display as hex]]
+:%!xxd -r [[back to ascii]]
+: enter command mode
+% the whole file
+! external command
+xxd hex editor
+-r reverse
