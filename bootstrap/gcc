@@ -1,0 +1,5 @@
+#for detailed exlanation see useful_commands
+#!/bin/bash
+/usr/local/i386elfgcc/bin/i386-elf-gcc -ffreestanding -c $1 -o objectfile.o # -c means only link 
+/usr/local/i386elfgcc/bin/i386-elf-ld -o c_kernel.bin -Ttext 0x8c00 --oformat binary objectfile.o # -Ttext 0 is like [org 0], assume the starting
+# address is 0. 
